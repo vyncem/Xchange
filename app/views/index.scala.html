@@ -1,0 +1,15 @@
+@(message: String)
+
+@main("Xchange") {
+    
+    @message    
+    <ul id="rates" name="rates"/>
+    <form action="@routes.Application.addRate()" method="post">
+    	<input name="currency"/>
+    	<input name="rate"/>
+    	<input type="submit"/>
+    	<input type="button" onclick="loadXMLDoc()" value="load"/>
+   	</form> 
+   	<div id="mydiv" name="mydiv">
+   	</div>
+}
